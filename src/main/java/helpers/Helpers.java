@@ -7,13 +7,13 @@ import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.io.IOException;
 
-import static core.TestBaseHtmlUnit.driverForHTMLUnit;
+import static helpers.DriverSingleton.getDriver;
 
 public class Helpers {
 
     public static void makeHtmlUnitScreen(String name) {
 
-        File scrFile = ((TakesScreenshot) driverForHTMLUnit).getScreenshotAs(OutputType.FILE);
+        File scrFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(scrFile, new File("target\\screens\\" + name + ".jpg"));
         } catch (IOException e) {

@@ -5,8 +5,8 @@ import pages.HtmlUnitHomePage;
 import pages.HtmlUnitLoginPage;
 
 public class HtmlUnitDriverRMSysLoginTest extends TestBaseHtmlUnit {
-    public static final String USER_NAME = "EugenBorisik";
-    public static final String PASSWORD = "qwerty12345";
+    private static final String USER_NAME = "EugenBorisik";
+    private static final String PASSWORD = "qwerty12345";
 
     @Test
     public void login() {
